@@ -1,0 +1,4 @@
+label-studio==1.12.1
+label-studio-sdk==1.0.3
+pandas==2.2.2
+python-dotenv==1.0.1
