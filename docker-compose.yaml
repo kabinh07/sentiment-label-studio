@@ -1,0 +1,16 @@
+services:
+  label_studio:
+    container_name: label-studio
+    hostname: sentiment_data_labeller
+    image: heartexlabs/label-studio:latest
+    working_dir: /app
+    ports:
+      - 8080:8080
+    volumes:
+      - ./label_studio_data/mydata:label-studio/data
+  
+  data_importer:
+    container_name: data-importer
+    build: .
+
+    
