@@ -55,7 +55,7 @@ print(df.shape)
 df.reset_index(drop=True, inplace=True)
 print(df.shape)
 data = []
-for idx, row in tqdm(df[:1000].iterrows(), total=1000):
+for idx, row in tqdm(df.iterrows(), total=len(df)):
     text = row["text"]
     data.append({"text": text})
     if (idx+1) % 100 == 0:
